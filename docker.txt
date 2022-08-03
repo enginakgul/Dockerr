@@ -1,0 +1,49 @@
+Docker nedir?:
+	Docker, Linux Containers(LXC) üzerine kurulu bir teknolojidir. Docker, açık kaynak
+(open source) Container teknolojisidir. Web uygulamalarımızın kolayca kurulumunu, testini,
+çalışmasını ve deployment'ını sağlar. 
+-------------------------------------------------------------------------------------
+Container nedir?:
+	Imageler'i, 'docker run' komutu ile çalıştırdığımız zaman ortaya çıkan yapıya 
+container denir. Container'lar, bize uygulamayı bilgisayara kurmadan kullanabilmemizi sağlar.
+Örnek olarak docker üzerinden ubuntu'yu kurup programı indirmeden kullanabiliriz.
+--------------------------------------------------------------------------------------
+
+** Docker'da Images'leri kurmak için pull kullanırız.
+Komut satırına 'docker pull ubuntu' dediğimiz zaman ubuntuyu indirecektir. Ubuntu burada bir 
+container'dır. Buradaki pull komutu indirme işlemini yapmaktadır.
+---------------------------------------------------------------------------------------
+Docker Image:
+	Docker üzerinde çalışacak bir container oluşturmak için gerekli olan template'lere 
+Docker Image denir. Container oluşturabilmek için Image'lere ihtiyaç vardır.
+----------------------------------------------------------------------------------------
+Dockerfile: 
+	Başkalarının Image'lerini kullanabildiğimiz gibi kendi Image'lerimizi de oluşturabiliriz.
+Kendi Image'mizi oluşturabilmek için Dockerfile oluşturmamız gerekir. Dockerfile aslında metin
+belgesidir. Dockerfile'da yazılan her komut Image'de bir katman(layer) oluşturur. Dockerfile 
+dosyasını değiştirdiğimiz zaman Image'i yeniden oluşturduğunuzda yalnızca katman(layer) 
+yeniden oluşur. Kısacası Docker Image, bir uygulamanın çalışması  için gerekli olan 
+programların, kütüphanelerin paketlenmiş haline Docker Image denir. Docker Image'de çekirdek
+(kernel) bulunmaz çünkü Container'ın işletim sisteminin kernel'i kullanılır. Docker Image,
+işletim sistemi değildir.
+-------------------------------------------------------------------------------------------
+Aktif olmayan containerları görmek için :
+docker container ls -a
+------------------------------------------------------------------------------------------
+Çalışan containerları görüntülemek:
+docker container ps -a ya da docker container ps --all ya da docker ps -a ya da docker ps --all
+------------------------------------------------------------------------------------------
+Container'a isim verme :
+CMD'de kod satırına docker run -it --name NEW_NAME CONTAINER_NAME ya da docker rename CONTAINER_NAME NEW_NAME
+-----------------------------------------------------------------------------------------------------
+docker rm komutu ile container silme işlemini yapabilirsiniz.
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
