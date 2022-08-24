@@ -1,0 +1,4 @@
+Docker Volume:
+ Docker'da her container çalıştırdığımızda biz tanımlamasak bile container kendine bir alan
+oluşturur ve işlem yaptığımız verileri bu oluşturduğu alan üzerinde tutar. Bu oluşturulan 
+alana 'Docker Volume' denir.
